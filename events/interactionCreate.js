@@ -1,8 +1,15 @@
-// Command handling
+// Interaction handling
 const { Events } = require('discord.js');
+// eslint-disable-next-line no-unused-vars
+const { BaseInteraction } = require('discord.js');
 
+
+// Command handling
 module.exports = {
 	name: Events.InteractionCreate,
+	/**
+	 * @param {BaseInteraction} interaction
+	 */
 	async execute(interaction) {
 		if (!interaction.isChatInputCommand()) return;
 
